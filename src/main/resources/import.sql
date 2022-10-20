@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS customers (id bigserial,name VARCHAR(255), PRIMARY KE
 INSERT INTO customers (name) VALUES ('John'), ('Jack'), ('Vlad');
 
 DROP TABLE orders IF EXISTS CASCADE;
-CREATE TABLE IF NOT EXISTS orders (id bigseril PRIMARY KEY,customer_id bigint REFERENCES customers (id),product_id bigint REFERENCES products (id),PRIMARY KEY(id));
+CREATE TABLE IF NOT EXISTS orders (id bigseril PRIMARY KEY,customer_id bigint REFERENCES customers (id),product_id bigint REFERENCES products (id));
 INSERT INTO orders(customer_id,product_id) VALUES (2,3);
 
 
